@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700&family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              montserrat: ["'Montserrat'", "sans-serif"],
+              inter: ["'Inter'", "sans-serif"],
+              sacramento: ["'Sacramento'", "cursive"],
+            },
+            colors: {
+              black: "#151515",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#FAFAFA] font-inter text-black">
+    <!-- Header -->
+    <header class="mt-[38px] mx-16 flex items-center space-x-9 bg">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-3">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M19.9657 40C30.9925 40 39.9315 31.0457 39.9315 20C39.9315 8.95431 30.9925 0 19.9657 0C8.93894 0 0 8.95431 0 20C0 31.0457 8.93894 40 19.9657 40ZM26.1943 9.31684C26.4975 8.23805 25.4524 7.60013 24.498 8.2813L11.1739 17.7896C10.1388 18.5283 10.3016 20 11.4185 20H14.9271V19.9728H21.7651L16.1934 21.9421L13.7371 30.6832C13.434 31.762 14.479 32.3999 15.4335 31.7187L28.7575 22.2105C29.7927 21.4718 29.6297 20 28.513 20H23.1923L26.1943 9.31684Z"
+            fill="currentColor"
+          />
+        </svg>
+        <span class="font-monserrat font-bold text-[22px]">OvaiceFast</span>
+      </a>
+
+      <!-- Search -->
+      <form action="#" class="flex bg-white p-6 rounded-full space-x-6">
+        <select name="category" id="category" class="font-medium text-lg">
+          <option value="all">All categories</option>
+          <option value="medan">Medan</option>
+        </select>
+        <span class="h-[22px] w-[1px] bg-[#E6E6E6]"></span>
+
+        <input
+          type="text"
+          name="query"
+          id="query"
+          placeholder="Try typing “spinach”"
+          class="block"
+        />
+
+        <button type="submit" class="text-[#697586]">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M18 11C18 14.866 14.866 18 11 18C7.13401 18 4 14.866 4 11C4 7.13401 7.13401 4 11 4C14.866 4 18 7.13401 18 11ZM18.0319 16.6177C19.2635 15.078 20 13.125 20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.125 20 15.078 19.2635 16.6177 18.0319L19.2929 20.7071C19.6834 21.0976 20.3166 21.0976 20.7071 20.7071C21.0976 20.3166 21.0976 19.6834 20.7071 19.2929L18.0319 16.6177Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </form>
+
+      <span class="flex-1"></span>
+
+      <!-- Navbar -->
+      <nav>
+        <ul class="flex space-x-[30px]">
+          <li>
+            <a href="#" class="font-medium text-lg">Explore</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-lg">Rents</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-lg">Sales</a>
+          </li>
+          <li>
+            <a href="#" class="font-medium text-lg">How it work</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Contact US -->
+      <button class="font-medium text-lg rounded-full bg-[#1F1F1F]/5 px-6 py-4">
+        Contact Us
+      </button>
+    </header>
+
+    <main>
+      <!-- Hero section -->
+      <section id="hero" class="flex mx-16 mt-16">
+        <div class="flex-1 relative">
+          <!-- Hero Image -->
+          <img
+            src="/assets/hero.png"
+            alt="Hero Image"
+            class="rounded-xl h-[518px] mx-auto"
+          />
+
+          <!-- Trusted Platform -->
+          <div
+            class="absolute flex items-center space-x-3 bg-white p-4 rounded top-10"
+          >
+            <div class="p-3 rounded-lg bg-[#1F1F1F]/5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5.05132 3.8163C3.82629 4.22465 3 5.37106 3 6.66235V12.0001C3 17.5021 8.56019 20.8418 10.9399 22.0192C11.6125 22.352 12.3875 22.352 13.0601 22.0192C15.4398 20.8418 21 17.5021 21 12.0001V6.66235C21 5.37106 20.1737 4.22465 18.9487 3.8163L12.9487 1.8163C12.3329 1.61104 11.6671 1.61104 11.0513 1.8163L5.05132 3.8163ZM15.7071 10.7072C16.0976 10.3166 16.0976 9.68348 15.7071 9.29295C15.3166 8.90243 14.6834 8.90243 14.2929 9.29295L11 12.5858L9.70711 11.293C9.31658 10.9024 8.68342 10.9024 8.29289 11.293C7.90237 11.6835 7.90237 12.3166 8.29289 12.7072L9.72721 14.1415C10.4302 14.8444 11.5698 14.8444 12.2728 14.1415L15.7071 10.7072Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <span class="font-medium">Trusted Platform</span>
+          </div>
+
+          <!-- Client -->
+          <div
+            class="flex flex-col items-center absolute bg-white px-4 py-6 rounded right-0 bottom-10 w-[180px]"
+          >
+            <div class="bg-[#1F1F1F]/5 p-[14px] rounded-full w-16 h-16">
+              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <path
+                  d="M1.5 25.4998V29.9998C1.5 30.8282 2.17157 31.4998 3 31.4998H24C24.8284 31.4998 25.5 30.8282 25.5 29.9998V25.4998C25.5 22.186 22.8137 19.4998 19.5 19.4998H7.5C4.18629 19.4998 1.5 22.186 1.5 25.4998Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M28.476 30.4674C28.4228 30.9823 28.7869 31.4998 29.3045 31.4998H33C33.8285 31.4998 34.5 30.8282 34.5 29.9998V25.4998C34.5 22.186 31.8137 19.4998 28.5 19.4998H27.0472C26.7231 19.4998 26.5452 19.8893 26.7381 20.1499C27.8453 21.6454 28.5 23.4961 28.5 25.4998V29.9998C28.5 30.1577 28.4919 30.3137 28.476 30.4674Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M19.5 10.4998C19.5 13.8135 16.8137 16.4998 13.5 16.4998C10.1863 16.4998 7.5 13.8135 7.5 10.4998C7.5 7.18605 10.1863 4.49976 13.5 4.49976C16.8137 4.49976 19.5 7.18605 19.5 10.4998Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M21.5261 16.4211C21.015 16.3377 20.8407 15.7337 21.1171 15.2957C21.9931 13.9073 22.5 12.2627 22.5 10.4998C22.5 8.73679 21.9931 7.09221 21.1171 5.70382C20.8407 5.26584 21.015 4.66181 21.5261 4.57839C21.8431 4.52665 22.1684 4.49976 22.5 4.49976C25.8137 4.49976 28.5 7.18605 28.5 10.4998C28.5 13.8135 25.8137 16.4998 22.5 16.4998C22.1684 16.4998 21.8431 16.4729 21.5261 16.4211Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+
+            <p class="font-semibold text-[26px] mt-3">22.000+</p>
+            <span class="text-lg font-medium text-[#697586]">Happy Client</span>
+          </div>
+        </div>
+
+        <div class="flex-1 pl-14">
+          <h3 class="font-sacramento text-[62px]">
+            Let's Find Your<br />
+            Comfortable And<br />
+            Safe Place To Live
+          </h3>
+
+          <p class="font-medium text-lg text-[#697586] w-8/12 mt-[10px]">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+
+          <div class="flex mt-14">
+            <button class="px-6 py-4 rounded bg-black text-lg text-white">
+              Explore Now
+            </button>
+            <button class="px-6 py-4 font-semibold text-lg flex items-center">
+              Learn more
+              <svg
+                width="14"
+                height="12"
+                viewBox="0 0 14 12"
+                fill="none"
+                class="ml-3"
+              >
+                <path
+                  d="M1 5.25C0.585786 5.25 0.25 5.58579 0.25 6C0.25 6.41421 0.585786 6.75 1 6.75V5.25ZM13.5303 6.53033C13.8232 6.23744 13.8232 5.76256 13.5303 5.46967L8.75736 0.696699C8.46447 0.403806 7.98959 0.403806 7.6967 0.696699C7.40381 0.989592 7.40381 1.46447 7.6967 1.75736L11.9393 6L7.6967 10.2426C7.40381 10.5355 7.40381 11.0104 7.6967 11.3033C7.98959 11.5962 8.46447 11.5962 8.75736 11.3033L13.5303 6.53033ZM1 6.75H13V5.25H1V6.75Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Popular Section -->
+      <section id="popular" class="mt-32 relative pb-10">
+        <div class="absolute bg-black w-full h-1/2 top-1/2"></div>
+        <!-- Title -->
+        <div class="flex mx-16 justify-between">
+          <h5 class="font-semibold text-[36px]">Most Popular Apartements</h5>
+          <div class="flex space-x-4">
+            <div class="flex items-center p-3 bg-white rounded">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M15 5.46839C15 5.006 14.683 4.60391 14.2334 4.496L9.61669 3.388C9.30227 3.31254 9 3.55085 9 3.87419V18.5316C9 18.994 9.31701 19.3961 9.76663 19.504L14.3833 20.612C14.6977 20.6874 15 20.4491 15 20.1258V5.46839Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M17.6952 4.37752C17.281 4.51006 17 4.89508 17 5.32994V19.995C17 20.3338 17.3298 20.5745 17.6524 20.4712L19.9143 19.7474C21.1569 19.3498 22 18.1947 22 16.8901V5.7399C22 4.3849 20.681 3.42208 19.3904 3.83505L17.6952 4.37752Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M4.08567 4.25258L6.34761 3.52876C6.67024 3.42551 7 3.66622 7 4.00497V18.67C7 19.1049 6.71896 19.4899 6.30478 19.6225L4.60955 20.1649C3.31902 20.5779 2 19.6151 2 18.2601V7.10985C2 5.80524 2.84313 4.65019 4.08567 4.25258Z"
+                  fill="currentColor"
+                />
+              </svg>
+
+              <span class="ml-1">Bandung</span>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M14.2256 7.71834L10.3735 11.449C9.61491 12.1837 8.38497 12.1837 7.62637 11.449L3.77424 7.71834C3.1287 7.09316 3.57128 6 4.46993 6L13.53 6C14.4286 6 14.8712 7.09316 14.2256 7.71834Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <button class="px-6 py-4 rounded bg-black text-lg text-white">
+              Explore Now
+            </button>
+          </div>
+        </div>
+
+        <!-- List -->
+        <ul class="grid mt-16 grid-cols-3 gap-6 mx-16">
+          <li class="relative bg-white p-6 rounded-lg">
+            <!-- Content -->
+            <div>
+              <!-- Image -->
+              <img src="/assets/popular1.png" alt="popular1" class="w-full" />
+
+              <!-- Rating -->
+              <div class="flex mt-4">
+                <div class="flex items-center">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none">
+                    <path
+                      d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+                      fill="#FFB52D"
+                    />
+                  </svg>
+                  <span class="font-semibold text-lg ml-1">4.9</span>
+                </div>
+                <span class="ml-1 tet-lg text-[#697586]"
+                  >(22 Review) • 1000 units</span
+                >
+              </div>
+
+              <p class="font-semibold text-xl mt-2">Haven Cubby Apartement</p>
+
+              <p class="flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20.0344 10.0348C20.0344 11.9349 19.3748 13.681 18.2722 15.0565H18.2768C18.2768 15.0565 15.4844 18.7933 13.3211 21.4393C12.631 22.2834 11.3685 22.2831 10.6788 21.4386C8.52246 18.7985 5.73361 15.0646 5.73361 15.0646L5.7271 15.0565C4.62442 13.681 3.96484 11.9349 3.96484 10.0348C3.96484 5.5973 7.56214 2 11.9996 2C16.4371 2 20.0344 5.5973 20.0344 10.0348ZM14.9998 10C14.9998 11.6569 13.6566 13 11.9998 13C10.3429 13 8.99976 11.6569 8.99976 10C8.99976 8.34315 10.3429 7 11.9998 7C13.6566 7 14.9998 8.34315 14.9998 10Z"
+                    fill="#151515"
+                  />
+                </svg>
+                <span class="ml-1 font-medium text-lg">Setia Budi</span>
+              </p>
+
+              <div class="flex mt-6 space-x-3">
+                <button class="flex-1 px-6 py-4 rounded bg-[#F3F3F3] text-lg">
+                  Click Details
+                </button>
+                <button
+                  class="flex-1 px-6 py-4 rounded bg-black text-lg text-white"
+                >
+                  Rent Now
+                </button>
+              </div>
+            </div>
+
+            <!-- Popular  -->
+            <div class="absolute top-[38px] left-0">
+              <div
+                class="flex px-6 py-4 bg-black text-white rounded-lg rounded-bl-none"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 22C16.2526 22 20 19 20 15C20 11 17 9 16 8C14.5939 6.5939 14.1521 4.74612 14.0254 3.4746C13.9552 2.77067 13.2759 2.27145 12.6864 2.66243C11.5335 3.42702 9.90375 4.98749 9 8C8.35747 10.1418 9 12 9 12C9 12 8 11.5 7.5 10C7.3353 9.5059 7.11635 8.90329 6.89675 8.31727C6.58071 7.47387 5.44066 7.48134 5.1629 8.33811C4.61497 10.0282 4 12.3031 4 14C4 19 7.74745 22 12 22Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-1"> Popular</span>
+              </div>
+
+              <div
+                class="w-3 border-[12px] border-black border-l-transparent border-b-transparent"
+              ></div>
+            </div>
+          </li>
+          <li class="relative bg-white p-6 rounded-lg">
+            <!-- Content -->
+            <div>
+              <!-- Image -->
+              <img src="/assets/popular1.png" alt="popular1" class="w-full" />
+
+              <!-- Rating -->
+              <div class="flex mt-4">
+                <div class="flex items-center">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none">
+                    <path
+                      d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+                      fill="#FFB52D"
+                    />
+                  </svg>
+                  <span class="font-semibold text-lg ml-1">4.9</span>
+                </div>
+                <span class="ml-1 tet-lg text-[#697586]"
+                  >(22 Review) • 1000 units</span
+                >
+              </div>
+
+              <p class="font-semibold text-xl mt-2">Haven Cubby Apartement</p>
+
+              <p class="flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20.0344 10.0348C20.0344 11.9349 19.3748 13.681 18.2722 15.0565H18.2768C18.2768 15.0565 15.4844 18.7933 13.3211 21.4393C12.631 22.2834 11.3685 22.2831 10.6788 21.4386C8.52246 18.7985 5.73361 15.0646 5.73361 15.0646L5.7271 15.0565C4.62442 13.681 3.96484 11.9349 3.96484 10.0348C3.96484 5.5973 7.56214 2 11.9996 2C16.4371 2 20.0344 5.5973 20.0344 10.0348ZM14.9998 10C14.9998 11.6569 13.6566 13 11.9998 13C10.3429 13 8.99976 11.6569 8.99976 10C8.99976 8.34315 10.3429 7 11.9998 7C13.6566 7 14.9998 8.34315 14.9998 10Z"
+                    fill="#151515"
+                  />
+                </svg>
+                <span class="ml-1 font-medium text-lg">Setia Budi</span>
+              </p>
+
+              <div class="flex mt-6 space-x-3">
+                <button class="flex-1 px-6 py-4 rounded bg-[#F3F3F3] text-lg">
+                  Click Details
+                </button>
+                <button
+                  class="flex-1 px-6 py-4 rounded bg-black text-lg text-white"
+                >
+                  Rent Now
+                </button>
+              </div>
+            </div>
+
+            <!-- Popular  -->
+            <div class="absolute top-[38px] left-0">
+              <div
+                class="flex px-6 py-4 bg-black text-white rounded-lg rounded-bl-none"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 22C16.2526 22 20 19 20 15C20 11 17 9 16 8C14.5939 6.5939 14.1521 4.74612 14.0254 3.4746C13.9552 2.77067 13.2759 2.27145 12.6864 2.66243C11.5335 3.42702 9.90375 4.98749 9 8C8.35747 10.1418 9 12 9 12C9 12 8 11.5 7.5 10C7.3353 9.5059 7.11635 8.90329 6.89675 8.31727C6.58071 7.47387 5.44066 7.48134 5.1629 8.33811C4.61497 10.0282 4 12.3031 4 14C4 19 7.74745 22 12 22Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-1"> Popular</span>
+              </div>
+
+              <div
+                class="w-3 border-[12px] border-black border-l-transparent border-b-transparent"
+              ></div>
+            </div>
+          </li>
+          <li class="relative bg-white p-6 rounded-lg">
+            <!-- Content -->
+            <div>
+              <!-- Image -->
+              <img src="/assets/popular1.png" alt="popular1" class="w-full" />
+
+              <!-- Rating -->
+              <div class="flex mt-4">
+                <div class="flex items-center">
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none">
+                    <path
+                      d="M9.04894 0.927052C9.3483 0.00574112 10.6517 0.00573993 10.9511 0.927051L12.4697 5.60081C12.6035 6.01284 12.9875 6.2918 13.4207 6.2918H18.335C19.3037 6.2918 19.7065 7.53141 18.9228 8.10081L14.947 10.9894C14.5966 11.244 14.4499 11.6954 14.5838 12.1074L16.1024 16.7812C16.4017 17.7025 15.3472 18.4686 14.5635 17.8992L10.5878 15.0106C10.2373 14.756 9.7627 14.756 9.41221 15.0106L5.43648 17.8992C4.65276 18.4686 3.59828 17.7025 3.89763 16.7812L5.41623 12.1074C5.55011 11.6954 5.40345 11.244 5.05296 10.9894L1.07722 8.10081C0.293507 7.53141 0.696283 6.2918 1.66501 6.2918H6.57929C7.01252 6.2918 7.39647 6.01284 7.53035 5.60081L9.04894 0.927052Z"
+                      fill="#FFB52D"
+                    />
+                  </svg>
+                  <span class="font-semibold text-lg ml-1">4.9</span>
+                </div>
+                <span class="ml-1 tet-lg text-[#697586]"
+                  >(22 Review) • 1000 units</span
+                >
+              </div>
+
+              <p class="font-semibold text-xl mt-2">Haven Cubby Apartement</p>
+
+              <p class="flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M20.0344 10.0348C20.0344 11.9349 19.3748 13.681 18.2722 15.0565H18.2768C18.2768 15.0565 15.4844 18.7933 13.3211 21.4393C12.631 22.2834 11.3685 22.2831 10.6788 21.4386C8.52246 18.7985 5.73361 15.0646 5.73361 15.0646L5.7271 15.0565C4.62442 13.681 3.96484 11.9349 3.96484 10.0348C3.96484 5.5973 7.56214 2 11.9996 2C16.4371 2 20.0344 5.5973 20.0344 10.0348ZM14.9998 10C14.9998 11.6569 13.6566 13 11.9998 13C10.3429 13 8.99976 11.6569 8.99976 10C8.99976 8.34315 10.3429 7 11.9998 7C13.6566 7 14.9998 8.34315 14.9998 10Z"
+                    fill="#151515"
+                  />
+                </svg>
+                <span class="ml-1 font-medium text-lg">Setia Budi</span>
+              </p>
+
+              <div class="flex mt-6 space-x-3">
+                <button class="flex-1 px-6 py-4 rounded bg-[#F3F3F3] text-lg">
+                  Click Details
+                </button>
+                <button
+                  class="flex-1 px-6 py-4 rounded bg-black text-lg text-white"
+                >
+                  Rent Now
+                </button>
+              </div>
+            </div>
+
+            <!-- Popular  -->
+            <div class="absolute top-[38px] left-0">
+              <div
+                class="flex px-6 py-4 bg-black text-white rounded-lg rounded-bl-none"
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 22C16.2526 22 20 19 20 15C20 11 17 9 16 8C14.5939 6.5939 14.1521 4.74612 14.0254 3.4746C13.9552 2.77067 13.2759 2.27145 12.6864 2.66243C11.5335 3.42702 9.90375 4.98749 9 8C8.35747 10.1418 9 12 9 12C9 12 8 11.5 7.5 10C7.3353 9.5059 7.11635 8.90329 6.89675 8.31727C6.58071 7.47387 5.44066 7.48134 5.1629 8.33811C4.61497 10.0282 4 12.3031 4 14C4 19 7.74745 22 12 22Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span class="ml-1"> Popular</span>
+              </div>
+
+              <div
+                class="w-3 border-[12px] border-black border-l-transparent border-b-transparent"
+              ></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
